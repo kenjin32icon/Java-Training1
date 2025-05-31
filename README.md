@@ -15,17 +15,21 @@ These examples are ideal for self-study, classroom training, or as a refresher f
 
 ## Repository Contents
 
-- [HelloWorld.java](https://github.com/Kenjin32icon/Java-Training1/blob/4130daa8323611acf9973474ce83434a63b87b6e/src/HelloWorld.java): A simple program to demonstrate the basic structure of a Java application.  
+- [HelloWorld.java](https://github.com/Kenjin32icon/Java-Training1/blob/4130daa8323611acf9973474ce83434a63b87b6e/src/HelloWorld.java): A simple program to demonstrate the basic structure of a Java application.
+- [Multiplication Table](https://github.com/Kenjin32icon/Java-Training1/blob/master/src/classasigmnts/MultplicationTable.java): Print the multiplication table of a given number using a loop.
 - **Animal.java:** A base class illustrating encapsulation and common behaviors.  
 - **Dog.java:** A subclass showcasing inheritance and method overriding (polymorphism).  
 - **Main.java:** The entry point class that creates objects and executes example methods.
 
 ## Getting Started
 
-To run these examples on your local machine:
+To run these examples on your local machine using IntelliJ IDEA:
 
 1. Ensure you have the Java Development Kit (JDK) installed.  
-2. Open a terminal or command prompt in the project directory.  
-3. Compile the Java files:  
+2. Download and install [IntelliJ IDEA;Community Version](https://www.jetbrains.com/idea/download/) if you haven't already.  
+3. Open IntelliJ IDEA and create a new project or open the existing project directory containing the Java files.  
+4. If you create a new project, make sure to select the appropriate JDK version.  
+5. Once the project is set up, you can directly run the Java files by right-clicking on the file (e.g., `Main.java`) and selecting "Run 'Main.main()'".  
+6. Alternatively, you can open a terminal within IntelliJ IDEA and compile the Java files using:  
    ```bash
    javac *.java
