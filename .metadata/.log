@@ -1,0 +1,241 @@
+!SESSION 2025-05-07 08:52:24.665 -----------------------------------------------
+eclipse.buildId=4.35.0.20250306-0811
+java.version=21.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-07 08:52:29.287
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-05-07 08:52:29.732
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.29.0 (1058) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY org.eclipse.equinox.p2.reconciler.dropins 4 0 2025-05-07 08:52:30.370
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Exception in org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start() of bundle org.eclipse.equinox.p2.reconciler.dropins.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:847)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:768)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1066)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:394)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:643)
+	at org.eclipse.osgi.container.Module.start(Module.java:500)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2111)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:146)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2102)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2044)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:2004)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1916)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+Caused by: org.eclipse.oomph.util.ReflectUtil$ReflectionException: org.eclipse.oomph.util.IORuntimeException: The file /home/infoscience/Desktop/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/epp.package.jee.profile/1745480138381.profile.gz of length 0 failed to load properly
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:141)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:301)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:237)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.containsProfile(LazyProfileRegistry.java:218)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.containsProfile(ProfilePreferences.java:115)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.load(ProfilePreferences.java:260)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:381)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:635)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:771)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:642)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:771)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:642)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:771)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:72)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:53)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getPreferences(AbstractRepositoryManager.java:524)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1053)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicGetRepository(AbstractRepositoryManager.java:190)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:678)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:1)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.initializeRepository(RepositoryListener.java:298)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.initializeMetadataRepository(RepositoryListener.java:93)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.<init>(RepositoryListener.java:65)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.DropinsRepositoryListener.<init>(DropinsRepositoryListener.java:85)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.watchDropins(Activator.java:505)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start(Activator.java:165)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:826)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:818)
+	... 14 more
+Caused by: org.eclipse.oomph.util.IORuntimeException: The file /home/infoscience/Desktop/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/epp.package.jee.profile/1745480138381.profile.gz of length 0 failed to load properly
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.loadProfile(LazyProfileRegistry.java:345)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getDelegate(LazyProfile.java:78)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getDelegate(LazyProfile.java:98)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getProperty(LazyProfile.java:158)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.updateSelfProfile(SimpleProfileRegistry.java:154)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	... 45 more
+Caused by: java.io.EOFException
+	at java.base/java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:279)
+	at java.base/java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:269)
+	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:175)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:728)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.loadProfile(LazyProfileRegistry.java:337)
+	... 52 more
+Root exception:
+org.eclipse.oomph.util.ReflectUtil$ReflectionException: org.eclipse.oomph.util.IORuntimeException: The file /home/infoscience/Desktop/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/epp.package.jee.profile/1745480138381.profile.gz of length 0 failed to load properly
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:141)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:301)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:237)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.containsProfile(LazyProfileRegistry.java:218)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.containsProfile(ProfilePreferences.java:115)
+	at org.eclipse.equinox.internal.p2.engine.ProfilePreferences.load(ProfilePreferences.java:260)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:381)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:635)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:771)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:642)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:771)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:642)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:771)
+	at org.eclipse.core.internal.preferences.RootPreferences.getNode(RootPreferences.java:72)
+	at org.eclipse.core.internal.preferences.RootPreferences.node(RootPreferences.java:53)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.getPreferences(AbstractRepositoryManager.java:524)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.restoreRepositories(AbstractRepositoryManager.java:1053)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.basicGetRepository(AbstractRepositoryManager.java:190)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:678)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:1)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.initializeRepository(RepositoryListener.java:298)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.initializeMetadataRepository(RepositoryListener.java:93)
+	at org.eclipse.equinox.internal.provisional.p2.directorywatcher.RepositoryListener.<init>(RepositoryListener.java:65)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.DropinsRepositoryListener.<init>(DropinsRepositoryListener.java:85)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.watchDropins(Activator.java:505)
+	at org.eclipse.equinox.internal.p2.reconciler.dropins.Activator.start(Activator.java:165)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:826)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$2.run(BundleContextImpl.java:1)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:818)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:768)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:1066)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:394)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:643)
+	at org.eclipse.osgi.container.Module.start(Module.java:500)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2111)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:146)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2102)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2044)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:2004)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1916)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+Caused by: org.eclipse.oomph.util.IORuntimeException: The file /home/infoscience/Desktop/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/epp.package.jee.profile/1745480138381.profile.gz of length 0 failed to load properly
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.loadProfile(LazyProfileRegistry.java:345)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getDelegate(LazyProfile.java:78)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getDelegate(LazyProfile.java:98)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getProperty(LazyProfile.java:158)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.updateSelfProfile(SimpleProfileRegistry.java:154)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	... 45 more
+Caused by: java.io.EOFException
+	at java.base/java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:279)
+	at java.base/java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:269)
+	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:175)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:728)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.loadProfile(LazyProfileRegistry.java:337)
+	... 52 more
+
+!ENTRY ch.qos.logback.classic 1 0 2025-05-07 08:53:12.672
+!MESSAGE Logback config file: /home/infoscience/IdeaProjects/BSC YR3 TUK IINFORMATICS/.metadata/.plugins/org.eclipse.m2e.logback/logback.2.7.0.20241001-1350.xml
+
+!ENTRY org.eclipse.oomph.ui 4 0 2025-05-07 08:53:25.381
+!MESSAGE java.lang.ExceptionInInitializerError
+!STACK 0
+java.lang.ExceptionInInitializerError
+	at org.eclipse.oomph.setup.ui.recorder.RecorderManager.<clinit>(RecorderManager.java:121)
+	at org.eclipse.oomph.setup.ui.SetupUIPlugin.performStartup(SetupUIPlugin.java:228)
+	at org.eclipse.oomph.setup.ui.EarlyStartup.earlyStartup(EarlyStartup.java:23)
+	at org.eclipse.oomph.internal.ui.EarlyStart.run(EarlyStart.java:119)
+	at org.eclipse.oomph.internal.ui.EarlyStart$1.run(EarlyStart.java:98)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.oomph.util.ReflectUtil$ReflectionException: org.eclipse.oomph.util.IORuntimeException: The file /home/infoscience/Desktop/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/epp.package.jee.profile/1745480138381.profile.gz of length 0 failed to load properly
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:141)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:301)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:237)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:263)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:192)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.getCurrentProfile(AgentImpl.java:411)
+	at org.eclipse.oomph.p2.internal.core.AgentImpl.initializeProvisioningAgent(AgentImpl.java:662)
+	at org.eclipse.oomph.p2.internal.core.AgentManagerImpl.getCurrentAgent(AgentManagerImpl.java:228)
+	at org.eclipse.oomph.p2.core.P2Util.getCurrentProvisioningAgent(P2Util.java:117)
+	at org.eclipse.oomph.setup.internal.core.util.SetupCoreUtil.<clinit>(SetupCoreUtil.java:158)
+	... 6 more
+Caused by: org.eclipse.oomph.util.IORuntimeException: The file /home/infoscience/Desktop/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/epp.package.jee.profile/1745480138381.profile.gz of length 0 failed to load properly
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.loadProfile(LazyProfileRegistry.java:345)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getDelegate(LazyProfile.java:78)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getDelegate(LazyProfile.java:98)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getProperty(LazyProfile.java:158)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.updateSelfProfile(SimpleProfileRegistry.java:154)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	... 15 more
+Caused by: java.io.EOFException
+	at java.base/java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:279)
+	at java.base/java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:269)
+	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:175)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:728)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.loadProfile(LazyProfileRegistry.java:337)
+	... 22 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-05-07 08:53:39.987
+!MESSAGE An internal error occurred during: "Update Job".
+!STACK 0
+org.eclipse.oomph.util.ReflectUtil$ReflectionException: org.eclipse.oomph.util.IORuntimeException: The file /home/infoscience/Desktop/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/epp.package.jee.profile/1745480138381.profile.gz of length 0 failed to load properly
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:141)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:301)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.getProfileMap(LazyProfileRegistry.java:237)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfile(SimpleProfileRegistry.java:263)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfile(SimpleProfileRegistry.java:192)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler$1.run(AutomaticUpdateScheduler.java:75)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.oomph.util.IORuntimeException: The file /home/infoscience/Desktop/eclipse/p2/org.eclipse.equinox.p2.engine/profileRegistry/epp.package.jee.profile/1745480138381.profile.gz of length 0 failed to load properly
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.loadProfile(LazyProfileRegistry.java:345)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getDelegate(LazyProfile.java:78)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getDelegate(LazyProfile.java:98)
+	at org.eclipse.oomph.p2.internal.core.LazyProfile.getProperty(LazyProfile.java:158)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.updateSelfProfile(SimpleProfileRegistry.java:154)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	... 6 more
+Caused by: java.io.EOFException
+	at java.base/java.util.zip.GZIPInputStream.readUByte(GZIPInputStream.java:279)
+	at java.base/java.util.zip.GZIPInputStream.readUShort(GZIPInputStream.java:269)
+	at java.base/java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:175)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+	at java.base/java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry$Parser.parse(SimpleProfileRegistry.java:728)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:126)
+	at org.eclipse.oomph.p2.internal.core.LazyProfileRegistry.loadProfile(LazyProfileRegistry.java:337)
+	... 13 more
