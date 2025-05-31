@@ -3,9 +3,8 @@ import java.util.Scanner;
 
 public class GradeCalculator {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-
         System.out.println("Simple Grade Calculator");
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Given that Grade(A =>70, B=>60, C=>50, D=> 40 Fail<40)");
 
