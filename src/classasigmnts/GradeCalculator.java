@@ -68,5 +68,39 @@ public class GradeCalculator {
 
         // Verson 2
 
+      //Initialize variables
+        float totalmarks = 0;
+        int numberofsubjects = 5;
+
+        //loops to input total number of subjects
+        for(int i=1; i <= numberofsubjects; i++){
+            System.out.println("Enter marks" + i + ":" );
+            float marks = scanner.nextFloat();
+            totalmarks += marks; //Accumulate totalmarks
+        }
+
+        //Calculate average
+        float average = totalmarks / numberofsubjects;
+        System.out.println("Average marks: " + average);
+
+        //Determine grade based on the average
+        char grade;
+        if (average >= 70) {
+            grade = 'A';
+        } else if (average >= 60) {
+            grade = 'B';
+        } else if (average >= 50){
+            grade = 'C';
+        } else if (average >= 40) {
+            grade = 'D';
+        } else{
+            grade = 'F'; //Fail
+        }
+
+       // print result
+        System.out.println("Grade" + grade);
+        scanner.close();
+
+
     }
 }
