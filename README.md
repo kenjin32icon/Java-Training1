@@ -23,7 +23,7 @@ These examples are ideal for self-study, classroom training, or as a refresher f
 - [Grade Calculator](https://github.com/Kenjin32icon/Java-Training1/blob/1a335a6a3d48107776703274661c1ecb65fc5cdc/src/classasigmnts/GradeCalculator.java):   - Input marks for 5 subjects and calculate the average. Assign grades based on average ("Given that Grade(A =>70, B=>60, C=>50, D=> 40 Fail<40)").
 - [Factorial of number](https://github.com/Kenjin32icon/Java-Training1/blob/fb64e921ba025701b944f76b6c17326a418a9976/src/classasigmnts/FactoralofaNumber.java) - Input a number and compute its factorial using a loop.
 - [Fibonacci Series](https://github.com/Kenjin32icon/Java-Training1/blob/8ff6759368ad4a8871f0318557b1a221d0f55c58/src/classasigmnts/FibonacciSeries.java) - Print the first N numbers of the Fibonacci sequence.
-- 
+- [Number Guessing Game](https://github.com/Kenjin32icon/Java-Training1/blob/710fa077187bf0d83511b82dbdbea3bb68c85746/src/classasigmnts/NumberGuessingGame.java) - Guessing game in java that can be annoying but it is fun. Try it.
 
 ## Getting Started
 
