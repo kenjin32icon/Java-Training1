@@ -14,12 +14,15 @@ This training repository includes straightforward examples demonstrating essenti
 These examples are ideal for self-study, classroom training, or as a refresher for basic Java OOP concepts.
 
 ## Repository Contents
+### Exercises
 
 - [HelloWorld.java](https://github.com/Kenjin32icon/Java-Training1/blob/4130daa8323611acf9973474ce83434a63b87b6e/src/HelloWorld.java): A simple program to demonstrate the basic structure of a Java application.
 - [Multiplication Table](https://github.com/Kenjin32icon/Java-Training1/blob/master/src/classasigmnts/MultplicationTable.java): Print the multiplication table of a given number using a loop.
-- **Animal.java:** A base class illustrating encapsulation and common behaviors.  
-- **Dog.java:** A subclass showcasing inheritance and method overriding (polymorphism).  
-- **Main.java:** The entry point class that creates objects and executes example methods.
+- [Odd or Even number generator](https://github.com/Kenjin32icon/Java-Training1/blob/1a335a6a3d48107776703274661c1ecb65fc5cdc/src/classasigmnts/OddorEven.java): Input an integer and determine whether it is odd or even.
+- [Leap Year Cheker](https://github.com/Kenjin32icon/Java-Training1/blob/1a335a6a3d48107776703274661c1ecb65fc5cdc/src/classasigmnts/LeapYearChecker.java): - Asks the user to enter a year and check whether it is a leap year.
+- [Grade Calculator](https://github.com/Kenjin32icon/Java-Training1/blob/1a335a6a3d48107776703274661c1ecb65fc5cdc/src/classasigmnts/GradeCalculator.java):   - Input marks for 5 subjects and calculate the average.
+                          - Assign grades based on average ("Given that Grade(A =>70, B=>60, C=>50, D=> 40 Fail<40)").
+- [Factorial of number]() - Input a number and compute its factorial using a loop.
 
 ## Getting Started
 
