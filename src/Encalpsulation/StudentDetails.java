@@ -1,6 +1,6 @@
 package Encalpsulation;
 
-public class StudentDetails {
+public class   StudentDetails {
     public static void main(String[] args0){
         StudentTUK student1 = new StudentTUK("Kevin", "kevin@gmail.com", 12345, "IT", 2025);
 

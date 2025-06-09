@@ -40,7 +40,7 @@ public class StudentTUK {
                 '}';
     }
 
-    public StudentTUK(String name, String email, int regno, String coure, int year) {
+    public StudentTUK(String name, String email, int regno, String course, int year) {
         this.name = name;
         this.email = email;
         this.regno = regno;

@@ -1,0 +1,13 @@
+Project Overview
+Student will develop a Student Management System using Java and object oriented programming principles.
+The system should :-
+- Allow student registration(Name, ID, course, Grade).
+- Implement encapsulating using private field and public getters and setters.
+- Store student record using and arraylist or a database (for advanced students. )
+- Use exceptional handling for invalid inputs
+- Implement file handling to save student records
+- Use multi threading to simulate multiple user accessing the system
+
+	Bonus feature
+- Implement an interactive console based menu
+- Use GUI(JavaFX or Swing) for advanced versions

@@ -69,11 +69,11 @@ public class GradeCalculator {
 
       //Initialize variables
         float totalmarks = 0;
-        int numberofsubjects = 5;
+        int numberofsubjects = 8;
 
         //loops to input total number of subjects
         for(int i=1; i <= numberofsubjects; i++){
-            System.out.println("Enter marks" + i + ":" );
+            System.out.println("Enter marks of unit " + i + ":" );
             float marks = scanner.nextFloat();
             totalmarks += marks; //Accumulate totalmarks
         }
@@ -97,7 +97,7 @@ public class GradeCalculator {
         }
 
        // print result
-        System.out.println("Grade" + grade);
+        System.out.println("Grade " + grade);
         scanner.close();
 
 
