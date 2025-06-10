@@ -8,6 +8,7 @@ public class   StudentDetails {
         System.out.println(student1.getEmail());
         System.out.println(student1.getRegno());
         System.out.println(student1.getCourse());
+
         System.out.println(student1.getYear());
 
         student1.setName("Consolata");

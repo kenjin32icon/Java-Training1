@@ -1,11 +1,19 @@
 package StudentManagementSystem;
 
+import java.util.ArrayList;
+import java.util.List;
 public class Student {
     private String name;
-    private int IDno;
+    private String IDno;
     private String Course;
     private char Grade;
 
+    public Student() {
+    }
+
+    //access methods the getter and mutator methods the setters
+    //Getters:- Provide a safeguard way to get the value of each instance from the outside of the Student Class
+    //Setters:- Provide a scripte way to change th value of the private field variables of this class
     public String getName() {
         return name;
     }
@@ -14,11 +22,11 @@ public class Student {
         this.name = name;
     }
 
-    public int getIDno() {
+    public String getIDno() {
         return IDno;
     }
 
-    public void setIDno(int IDno) {
+    public void setIDno(String IDno) {
         this.IDno = IDno;
     }
 
@@ -38,18 +46,20 @@ public class Student {
         Grade = grade;
     }
 
+
     @Override
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
-                ", IDno=" + IDno +
+                ", IDno=" + IDno + '\'' +
                 ", Course='" + Course + '\'' +
                 ", Grade=" + Grade +
                 '}';
     }
 
 
-    public Student(String name, int IDno, String Course, char Grade){
+    //Class private field constructors
+    public Student(String name, String IDno, String Course, char Grade){
         this.name = name;
         this.IDno = IDno;
         this.Course = Course;
