@@ -1,5 +1,7 @@
 package StudentManagementSystem;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 public class StudentRegistration extends Student {
     public StudentRegistration(String name, String IDno, String Course, char Grade) {
@@ -48,8 +50,8 @@ public class StudentRegistration extends Student {
 
         // If all validations pass, set values
         setName(name);
-        setId(id);
-        setCourse(course);
+        setIDno(IDno);
+        setCourse(Course);
 
         //Calculate average
         float average = totalmarks / numberofunits;
@@ -74,7 +76,7 @@ public class StudentRegistration extends Student {
             System.out.println("\nPlease review the entered student data:");
             System.out.println("-------------------------------------");
             System.out.println("Name   : " + getName());
-            System.out.println("ID     : " + getId());
+            System.out.println("ID     : " + getIDno());
             System.out.println("Course : " + getCourse());
             System.out.println("Average marks: " + average);
             System.out.println("Grade  : " + getGrade());
