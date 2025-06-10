@@ -1,7 +1,7 @@
 package StudentManagementSystem;
 
 import java.util.Scanner;
-public class StudentRegistration extends Student{
+public class StudentRegistration extends Student {
     public StudentRegistration(String name, String IDno, String Course, char Grade) {
         super(name, IDno, Course, Grade);
     }
@@ -10,7 +10,6 @@ public class StudentRegistration extends Student{
     //inputData; a boolean class for prompting user to input their data
     public boolean inputData(Scanner scanner) {
         System.out.println("    Student Management System");
-
 
 
         System.out.println("Student Name: ");
@@ -41,8 +40,8 @@ public class StudentRegistration extends Student{
         int numberofunits = 8; // 8 units
 
         //loops to input total number of units
-        for(int i=1; i <= numberofunits; i++){
-            System.out.println("Enter marks of unit " + i + ":" );
+        for (int i = 1; i <= numberofunits; i++) {
+            System.out.println("Enter marks of unit " + i + ":");
             float marks = scanner.nextFloat();
             totalmarks += marks; //Accumulate totalmarks
         }
@@ -62,13 +61,24 @@ public class StudentRegistration extends Student{
             grade = 'A';
         } else if (average >= 60) {
             grade = 'B';
-        } else if (average >= 50){
+        } else if (average >= 50) {
             grade = 'C';
         } else if (average >= 40) {
             grade = 'D';
-        } else{
+        } else {
             grade = 'F'; //Fail
         }
-    }
 
+        // Display all data for user to confirm
+        public void displayData() {
+            System.out.println("\nPlease review the entered student data:");
+            System.out.println("-------------------------------------");
+            System.out.println("Name   : " + getName());
+            System.out.println("ID     : " + getId());
+            System.out.println("Course : " + getCourse());
+            System.out.println("Average marks: " + average);
+            System.out.println("Grade  : " + getGrade());
+            System.out.println("-------------------------------------");
+        }
+    }
 }
