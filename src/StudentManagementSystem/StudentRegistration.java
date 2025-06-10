@@ -7,7 +7,8 @@ public class StudentRegistration extends Student{
     }
 
 
-    public boolean inputData(Scanner scanner) {{
+    //inputData; a boolean class for prompting user to input their data
+    public boolean inputData(Scanner scanner) {
         System.out.println("    Student Management System");
 
 
