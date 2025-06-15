@@ -9,7 +9,7 @@ public class Multithreading {
         // TO create more 2 threads use a for loop
         for( int i = 0; i < 5; i++){
             //creating an object
-            Multithreadthing myThing = new Multithreadthing();
+            Multithreadthing myThing = new Multithreadthing(i);
 
 //Using start instead run java will branch of a new thread.
             // Using run it would complete the first thread then goes to the second thread
