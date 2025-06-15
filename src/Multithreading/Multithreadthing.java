@@ -2,7 +2,8 @@ package Multithreading;
 
 //Ways of creating a multithread class 1, extending a Thread class which in java only allows one instance of inheritance. Cant extend any other class.
 // Second way is to implement the Runnable interface
-public class Multithreadthing implements Runnable {
+// You can extend any other class
+public class Multithreadthing /* extends AnyOtherclass */ implements Runnable /* Implement AnotherInterface*/ {
     // To make it mutithreadable is to override the thread classes run method.
 
     //  Create a new constructor
