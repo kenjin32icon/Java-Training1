@@ -11,11 +11,13 @@ public class Multithreading {
         for( int i = 0; i < 5; i++){
             //creating an object
             Multithreadthing myThing = new Multithreadthing(i);
+            Thread myThread = new Thread(myThing);
 
 //Using start instead run java will branch of a new thread.
             // Using run it would complete the first thread then goes to the second thread
-            myThing.start();
+            myThread.start();
         }
+        throw new RuntimeException();
 
     }
 }
