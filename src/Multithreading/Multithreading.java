@@ -3,6 +3,7 @@ package Multithreading;
 // Multithreading enables a program to do multiple different things at the same time.
 // The ability to execute multiple different paths of code at the same time.
 // in java usually use only one path but using multithreading you can bypass this.
+// If one of the threads blow up with some kind of exception it doesn't impact the other threads. THey keep performing as business a usual ,
 public class Multithreading {
     public static void main (String[] args){
 
