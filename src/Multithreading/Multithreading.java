@@ -5,7 +5,7 @@ package Multithreading;
 // in java usually use only one path but using multithreading you can bypass this.
 // If one of the threads blow up with some kind of exception it doesn't impact the other threads. THey keep performing as business a usual ,
 public class Multithreading {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // TO create more 2 threads use a for loop
         for (int i = 0; i < 5; i++) {
@@ -23,6 +23,15 @@ public class Multithreading {
 //            } catch (InterruptedException e) {
 //            }
 //            throw new RuntimeException();
+//        }
+
+            //.isAlive() when called when the threads are running it would return true
+            // If the thread completes it would return false
+//            try {
+//                myThread.isAlive();
+//            } catch (RuntimeException e) {
+//            }
+//
 //        }
         }
     }
