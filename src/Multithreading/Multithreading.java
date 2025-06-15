@@ -10,12 +10,10 @@ public class Multithreading {
         for( int i = 0; i < 5; i++){
             //creating an object
             Multithreadthing myThing = new Multithreadthing();
-            Multithreadthing myThing2 = new Multithreadthing();
 
 //Using start instead run java will branch of a new thread.
             // Using run it would complete the first thread then goes to the second thread
             myThing.start();
-            myThing2.start(); // After adding the second myThing 2  it would the 2 different threads would be running at the same time.
         }
 
     }
