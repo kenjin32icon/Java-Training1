@@ -1,0 +1,5 @@
+Polymorphisism in OOP is when an object or method could be made to have different methods of
+    implementing it an example of the code their is the main class -Animal-
+ The main class has the method of -makeSound- that other new classes could implement by
+    using the that -makeSound- method and overriding the the method with a new impementation that
+    the programmer would choose.
